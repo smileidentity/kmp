@@ -5,7 +5,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.vanniktech.mavenPublish)
+    alias(libs.plugins.mavenPublish)
 }
 
 val groupId = "com.smileidentity"
@@ -92,6 +92,14 @@ mavenPublishing {
                 url = "https://github.com/jumaallan"
                 organization = "Smile ID"
                 organizationUrl = "https://usesmileid.com"
+            }
+            developer { // add your details here and delete this comment
+                id = ""
+                name = ""
+                email = ""
+                url = ""
+                organization = ""
+                organizationUrl = ""
             }
         }
     }

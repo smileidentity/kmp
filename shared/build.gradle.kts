@@ -36,12 +36,12 @@ kotlin {
 
 android {
     namespace = "com.smileidentity.kmp.sample.shared"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    compileSdk = 35
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
     defaultConfig {
-        minSdk = libs.versions.android.minSdk.get().toInt()
+        minSdk = 21
     }
 }
