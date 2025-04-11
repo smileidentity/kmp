@@ -10,16 +10,15 @@ plugins {
 
 val groupId = "com.smileidentity"
 val artifactId = "kmp-sdk"
-project.version = findProperty("VERSION_NAME") as? String
-    ?: file("VERSION").readText().trim().toString()
+project.version =
+    findProperty("VERSION_NAME") as? String ?: file("VERSION").readText().trim().toString()
 
 kotlin {
     jvm()
     androidTarget {
         publishLibraryVariants("release")
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_11)
+        @OptIn(ExperimentalKotlinGradlePluginApi::class) compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_17)
         }
     }
     iosX64()
@@ -54,8 +53,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
@@ -93,13 +92,13 @@ mavenPublishing {
                 organization = "Smile ID"
                 organizationUrl = "https://usesmileid.com"
             }
-            developer { // add your details here and delete this comment
-                id = ""
-                name = ""
-                email = ""
-                url = ""
-                organization = ""
-                organizationUrl = ""
+            developer {
+                id = "mugolazarus"
+                name = "Mugo Lazarus"
+                email = "mugolazarusk@gmail.com"
+                url = "https://github.com/lazarusmugo"
+                organization = "Tajji Ltd"
+                organizationUrl = "https://tajji.io"
             }
         }
     }
