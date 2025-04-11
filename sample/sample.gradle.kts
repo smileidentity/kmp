@@ -11,17 +11,16 @@ plugins {
 
 kotlin {
     androidTarget {
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
-        compilerOptions {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class) compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
     }
-    
+
     jvm("desktop")
-    
+
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -36,6 +35,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(projects.shared)
+            implementation(projects.lib)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

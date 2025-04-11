@@ -1,11 +1,19 @@
+import com.codingfeline.buildkonfig.compiler.FieldSpec
 import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.io.FileInputStream
+import java.util.Properties
+
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.mavenPublish)
+    alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.buildkonfig)
+
 }
 
 val groupId = "com.smileidentity"
@@ -15,21 +23,35 @@ project.version =
 
 kotlin {
     jvm()
+
     androidTarget {
         publishLibraryVariants("release")
         @OptIn(ExperimentalKotlinGradlePluginApi::class) compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
     }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
-    linuxX64()
 
     sourceSets {
+        val androidMain by getting {
+            dependencies {
+                implementation(libs.smile.id.android)
+                implementation(libs.androidx.activity.compose)
+            }
+        }
+
         val commonMain by getting {
             dependencies {
-                //put your multiplatform dependencies here
+                //compose
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material3)
+                implementation(compose.materialIconsExtended)
+                implementation(compose.components.resources)
+                implementation(compose.components.uiToolingPreview)
             }
         }
         val commonTest by getting {
@@ -37,6 +59,14 @@ kotlin {
                 implementation(libs.kotlin.test)
             }
         }
+
+        val jvmMain by getting
+
+        jvmMain.dependencies {
+            implementation(compose.desktop.currentOs)
+            implementation(libs.kotlinx.coroutines.swing)
+        }
+
     }
 }
 
@@ -101,5 +131,39 @@ mavenPublishing {
                 organizationUrl = "https://tajji.io"
             }
         }
+    }
+}
+
+val localProperties = Properties().apply {
+    val localPropertiesFile = File(project.rootDir, "local.properties")
+    if (localPropertiesFile.exists()) {
+        FileInputStream(localPropertiesFile).use { load(it) }
+    }
+}
+
+buildkonfig {
+    packageName = "com.smileidentity.kmp.config"
+
+    defaultConfigs {
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_API_KEY",
+            value = localProperties.getProperty("SMILE_ID_API_KEY")
+                ?: System.getenv("SMILE_ID_API_KEY")
+        )
+
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_ENVIRONMENT",
+            value = localProperties.getProperty("SMILE_ID_ENVIRONMENT")
+                ?: System.getenv("SMILE_ID_ENVIRONMENT")
+        )
+
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_SMILE_LINK",
+            value = localProperties.getProperty("SMILE_ID_SMILE_LINK")
+                ?: System.getenv("SMILE_ID_SMILE_LINK")
+        )
     }
 }
