@@ -6,10 +6,10 @@ import com.smileidentity.kmp.config.SmileIdentity
 
 
 @Composable
-fun SmartSelfieEnrollment() {
+fun EnhancedDocumentVerification() {
     SmileIdentity.getInstance()
-    ComposeSmartSelfieEnrollment()
+    ComposeEnhancedDocumentVerification()
 }
 
 @Composable
-expect fun ComposeSmartSelfieEnrollment()
+expect fun ComposeEnhancedDocumentVerification()

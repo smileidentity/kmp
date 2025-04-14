@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import com.smileidentity.SmileID
 import com.smileidentity.compose.EnhancedDocumentVerificationScreen
 
+
 @Composable
-actual fun ComposeSmartSelfieEnrollment() {
+actual fun ComposeEnhancedDocumentVerification() {
     SmileID.EnhancedDocumentVerificationScreen(countryCode = "KE")
 }

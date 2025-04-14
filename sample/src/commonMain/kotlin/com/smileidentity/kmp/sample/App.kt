@@ -6,7 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.smileidentity.kmp.presentation.SmartSelfieEnrollment
+import com.smileidentity.kmp.presentation.EnhancedDocumentVerification
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -14,7 +14,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 fun App() {
     MaterialTheme {
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-            SmartSelfieEnrollment()
+            EnhancedDocumentVerification()
         }
     }
 }

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="si_company_name">smile id</string>
+    <string name="si_attribution_powered_by">inaendeshwa na |</string>
+    <string name="si_camera_permission_rationale">ruhusa ya kamera inahitajika ili kukamilisha mchakato wa uthibitishaji</string>
+    <string name="si_agent_mode">njia ya wakala</string>
+
+    <!--  common resources -->
+    <string name="si_continue">endelea</string>
+    <string name="si_allow">ruhusu</string>
+    <string name="si_cancel">ghairi</string>
+
+    <!--  content descriptions (for accessibility)  -->
+    <string name="si_cd_logo">nembo ya smile id</string>
+    <string name="si_cd_agent_mode_enabled">njia ya wakala imewezeshwa</string>
+    <string name="si_cd_selfie_capture_instructions">maelekezo ya kupiga selfie</string>
+
+    <!--  generic instructions  -->
+    <string name="si_photo_capture_instruction_good_light_title">mwanga mzuri</string>
+    <string name="si_photo_capture_instruction_good_light_subtitle">hakikisha uko katika mazingira yenye mwanga wa kutosha ambapo uso wako unaonekana wazi</string>
+    <string name="si_photo_capture_instruction_clear_image_title">picha safi</string>
+    <string name="si_photo_capture_instruction_clear_image_subtitle">shikilia simu yako vizuri ili picha iwe wazi na isiyo na ukungu</string>
+    <string name="si_photo_capture_instruction_remove_obstructions_title">ondoa vikwazo</string>
+    <string name="si_photo_capture_instruction_remove_obstructions_subtitle">ondoa kitu chochote kinachofunika uso wako, kama vile miwani, barakoa, kofia na skafu</string>
+    <string name="si_verify_identity_instruction_subtitle">tutaitumia kuthibitisha utambulisho wako.\ntafadhali fuata maelekezo hapa chini.</string>
+
+    <!--  smartselfie  -->
+    <string name="si_smart_selfie_enrollment_product_name">usajili wa smartselfie™</string>
+    <string name="si_smart_selfie_enrollment_enhanced_product_name">usajili ulioimarishwa wa smartselfie™</string>
+    <string name="si_smart_selfie_authentication_product_name">uthibitishaji wa smartselfie™</string>
+    <string name="si_smart_selfie_authentication_enhanced_product_name">uthibitishaji ulioimarishwa wa smartselfie™</string>
+    <string name="si_smart_selfie_instruction_title">sasa, tutapiga selfie haraka</string>
+    <string name="si_smart_selfie_instruction_ready_button">niko tayari</string>
+    <string name="si_smart_selfie_instructions">weka uso wako ndani ya fremu ya mviringo na subiri hadi iwe ya kijani</string>
+    <string name="si_smart_selfie_directive_smile">tabasamu!</string>
+    <string name="si_smart_selfie_directive_capturing">inapiga picha…</string>
+    <string name="si_smart_selfie_directive_unable_to_detect_face">weka uso wako kwenye fremu</string>
+    <string name="si_smart_selfie_directive_multiple_faces">hakikisha uso mmoja tu unaonekana</string>
+    <string name="si_smart_selfie_directive_face_too_far">sogea karibu</string>
+    <string name="si_smart_selfie_directive_face_too_close">sogea mbali kidogo</string>
+    <string name="si_smart_selfie_confirmation_dialog_title">je, hii ni selfie nzuri?</string>
+    <string name="si_smart_selfie_confirmation_dialog_subtitle">hakikisha uso wako wote unaonekana na uko wazi</string>
+    <string name="si_smart_selfie_confirmation_dialog_confirm_button">ndio, tumia hii</string>
+    <string name="si_smart_selfie_confirmation_dialog_retake_button">hapana, piga selfie tena</string>
+    <string name="si_smart_selfie_processing_title">inachakata selfie</string>
+    <string name="si_smart_selfie_processing_subtitle">tafadhali subiri sekunde chache zaidi</string>
+    <string name="si_smart_selfie_processing_success_title">upigaji wa selfie umekamilika</string>
+    <string name="si_smart_selfie_processing_success_subtitle">selfie yako imepigwa kwa mafanikio. sasa unaweza kuendelea</string>
+    <string name="si_smart_selfie_processing_error_title">selfie yako imeshindwa kuchakatwa</string>
+    <string name="si_smart_selfie_processing_retry_button">jaribu tena</string>
+    <string name="si_smart_selfie_processing_close_button">funga</string>
+
+    <!--  smartselfie enhanced  -->
+    <string name="si_smart_selfie_enhanced_get_started">anza</string>
+    <string name="si_smart_selfie_enhanced_instructions">weka kichwa chako ndani ya mtazamo wa kamera. kisha songa kuelekea mwelekeo unaoonyeshwa.</string>
+    <string name="si_smart_selfie_enhanced_auth_product_name">smartselfie™ uthibitishaji\n(iliyoboreshwa)</string>
+    <string name="si_smart_selfie_enhanced_enroll_product_name">smartselfie™ usajili\n(iliyoboreshwa)</string>
+    <string name="si_smart_selfie_enhanced_directive_place_entire_head_in_frame">weka kichwa chako ndani ya mtazamo</string>
+    <string name="si_smart_selfie_enhanced_directive_ensure_device_upright">hakikisha kifaa chako kimesimama wima</string>
+    <string name="si_smart_selfie_enhanced_directive_ensure_one_face">hakikisha uso mmoja tu ndio unaonekana</string>
+    <string name="si_smart_selfie_enhanced_directive_ensure_entire_face_visible">hakikisha uso wako wote unaonekana</string>
+    <string name="si_smart_selfie_enhanced_directive_need_more_light">songa kwenye chumba chenye mwanga mzuri</string>
+    <string name="si_smart_selfie_enhanced_directive_move_back">rudi nyuma</string>
+    <string name="si_smart_selfie_enhanced_directive_move_closer">songa karibu</string>
+    <string name="si_smart_selfie_enhanced_directive_poor_image_quality">ubora wa picha ni duni</string>
+    <string name="si_smart_selfie_enhanced_directive_look_left">geuza kichwa chako kushoto</string>
+    <string name="si_smart_selfie_enhanced_directive_look_right">geuza kichwa chako kulia</string>
+    <string name="si_smart_selfie_enhanced_directive_look_up">inua kichwa chako kidogo juu</string>
+    <string name="si_smart_selfie_enhanced_directive_keep_looking">tazama kamera</string>
+    <string name="si_smart_selfie_enhanced_directive_smile">tabasamu!</string>
+    <string name="si_smart_selfie_enhanced_submitting">inatuma</string>
+    <string name="si_smart_selfie_enhanced_submission_successful">imefaulu</string>
+    <string name="si_smart_selfie_enhanced_submission_failed">imeshindwa</string>
+
+    <!--  document verification  -->
+    <string name="si_doc_v_product_name">uthibitishaji wa hati</string>
+    <string name="si_doc_v_instruction_skip_back_id">puuza sehemu ya nyuma ya id</string>
+    <string name="si_doc_v_instruction_ready_button">piga picha</string>
+    <string name="si_doc_v_instruction_upload_button">pakia picha</string>
+    <string name="si_doc_v_instruction_title">tuma sehemu ya mbele ya id</string>
+    <string name="si_doc_v_instruction_back_title">tuma sehemu ya nyuma ya id</string>
+    <string name="si_doc_v_instruction_back_subtitle">kwa aina hii ya id, tunahitaji utume sehemu ya nyuma ya id</string>
+    <string name="si_doc_v_capture_instructions_front_title">sehemu ya mbele ya id</string>
+    <string name="si_doc_v_capture_instructions_back_title">sehemu ya nyuma ya id</string>
+    <string name="si_doc_v_capture_directive_default">tafadhali jaza fremu na id yako. hakikisha kona zote zinaonekana na hakuna mwangaza</string>
+    <string name="si_doc_v_capture_directive_ensure_well_lit">hakikisha hati ina mwanga mzuri</string>
+    <string name="si_doc_v_capture_directive_focusing">inalenga…</string>
+    <string name="si_doc_v_capture_directive_capturing">inachukua…</string>
+    <string name="si_doc_v_capture_error_subtitle">uchukuzi wa hati yako ulishindwa kutekelezwa</string>
+    <string name="si_doc_v_validation_image_too_small">picha uliyochagua ni ndogo sana. tafadhali chagua picha yenye azimio kubwa zaidi.</string>
+    <string name="si_doc_v_confirmation_dialog_title">je, hati inaonekana wazi na inasomeka?</string>
+    <string name="si_doc_v_confirmation_dialog_subtitle">hakikisha kona zote za hati zinaonekana na hakuna mwangaza</string>
+    <string name="si_doc_v_confirmation_dialog_confirm_button">ndio, id yangu inaonekana wazi</string>
+    <string name="si_doc_v_confirmation_dialog_retake_button">hapana, piga picha tena</string>
+    <string name="si_doc_v_processing_title">inashughulikia hati</string>
+    <string name="si_doc_v_processing_subtitle">sekunde chache tu zaidi</string>
+    <string name="si_doc_v_processing_success_title">uthibitishaji wa hati kamili</string>
+    <string name="si_doc_v_processing_success_subtitle">hati yako ilichukuliwa kwa mafanikio. sasa unaweza kuendelea</string>
+    <string name="si_doc_v_processing_error_title">uthibitishaji wa hati yako ulishindwa kutekelezwa</string>
+
+    <!--  biometric kyc  -->
+    <string name="si_biometric_kyc_product_name">kyc ya kibiometri</string>
+    <string name="si_biometric_kyc_processing_title">inashughulikia selfie yako na id</string>
+    <string name="si_biometric_kyc_processing_success_title">uwasilishaji kamili</string>
+    <string name="si_biometric_kyc_processing_success_subtitle">sasa unaweza kuendelea</string>
+    <string name="si_biometric_kyc_processing_error_subtitle">uwasilishaji wako ulishindwa kutekelezwa</string>
+
+    <!--  country names  -->
+    <string name="si_country_name_ghana">ghana</string>
+    <string name="si_country_name_kenya">kenya</string>
+    <string name="si_country_name_nigeria">nigeria</string>
+    <string name="si_country_name_south_africa">afrika kusini</string>
+    <string name="si_country_name_uganda">uganda</string>
+
+    <!--  id type names  -->
+    <string name="si_id_type_name_drivers_license">leseni ya dereva</string>
+    <string name="si_id_type_name_passport">pasipoti</string>
+    <string name="si_id_type_name_ssnit">ssnit</string>
+    <string name="si_id_type_name_voter_id">kitambulisho cha mpiga kura</string>
+    <string name="si_id_type_name_new_voter_id">kitambulisho kipya cha mpiga kura</string>
+    <string name="si_id_type_name_alien_card">kadi ya mgeni</string>
+    <string name="si_id_type_name_national_id">kitambulisho cha kitaifa</string>
+    <string name="si_id_type_name_national_id_no_photo">kitambulisho cha kitaifa (bila picha)</string>
+    <string name="si_id_type_name_bank_account">account ya benki</string>
+    <string name="si_id_type_name_bvn">bvn</string>
+    <string name="si_id_type_name_nin_v2">nin v2</string>
+    <string name="si_id_type_name_nin_slip">slipi ya nin</string>
+    <string name="si_id_type_name_v_nin">nin ya kidijitali</string>
+    <string name="si_id_type_name_phone_number">nambari ya simu</string>
+
+    <!--  id field names  -->
+    <string name="si_id_field_name_id_number">nambari ya id</string>
+    <string name="si_id_field_name_first_name">jina la kwanza</string>
+    <string name="si_id_field_name_last_name">jina la mwisho</string>
+    <string name="si_id_field_name_dob">tarehe ya kuzaliwa</string>
+    <string name="si_id_field_name_bank_code">nambari ya benki</string>
+
+    <!--  consent screen  -->
+    <string name="si_consent_title">%1$s anataka kufikia taarifa zako za %2$s</string>
+    <string name="si_consent_sub_title">hii itamruhusu %1$s kufanya yafuatayo:</string>
+    <string name="si_consent_info_one_title">process details zako binafsi</string>
+    <string name="si_consent_info_one_description">mshirika anaweza kutoa majina yako, tarehe ya kuzaliwa, na jinsia</string>
+    <string name="si_consent_info_two_title">process taarifa zako za mawasiliano</string>
+    <string name="si_consent_info_two_description">mshirika anaweza kushughulikia nambari zako za simu na anwani</string>
+    <string name="si_consent_info_three_title">process taarifa zako za hati</string>
+    <string name="si_consent_info_three_description">mshirika anaweza kushughulikia picha yako, tarehe ya kumalizika kwa id, nchi ya kutoa, na nambari ya hati</string>
+    <string name="si_consent_privacy_policy">unaweza kuona sera ya faragha ya %1$s <annotation is_url="true">hapa</annotation></string>
+    <string name="si_consent_privacy_policy_description">kwa kuchagua 'ruhusu' unampa %1$s idhini ya kushughulikia data zako binafsi ili kutoa huduma hii kwako</string>
+    <string name="si_consent_consent_denied">idhini imetatizwa</string>
+    <string name="si_consent_consent_denied_title">hatuna uwezo wa kukuthibitisha bila idhini yako</string>
+    <string name="si_consent_consent_denied_description">je, unataka kurudi na kurekebisha hilo?</string>
+    <string name="si_consent_go_back">ndio, rudi nyuma</string>
+    <string name="si_consent_cancel_verification">hapana, futa uthibitishaji</string>
+
+    <!--  bvn consent screen  -->
+    <string name="si_bvn_product_name">idhini ya bvn</string>
+    <string name="si_bvn_enter_bvn_number">ingiza nambari yako ya bvn</string>
+    <string name="si_bvn_enter_id_bank_verification">nambari ya uthibitisho wa benki</string>
+    <string name="si_bvn_acronym">bvn</string>
+    <string name="si_bvn_enter_bvn_number_limit">nambari yako ya bvn inapaswa kuwa na herufi 11</string>
+    <string name="si_bvn_enter_id_wrong_bvn">umeingiza bvn isiyo sahihi. tafadhali jaribu tena</string>
+    <string name="si_bvn_select_contact_method">chagua njia ya mawasiliano</string>
+    <string name="si_bvn_nibss">nibss, mlinzi wa data wa bvn, atakutumia neno la siri la muda mmoja (otp)</string>
+    <string name="si_bvn_nibss_partner">omba itatoka kwa chams plc, ambaye ni mshirika wa kiteknolojia wa nibss.</string>
+    <string name="si_bvn_email_verification">otp itatumwa kwa barua pepe yako ili kuthibitisha utambulisho wako</string>
+    <string name="si_bvn_sms_verification">otp itatumwa kama sms kwa simu yako ili kuthibitisha utambulisho wako</string>
+    <string name="si_bvn_verification">uthibitisho wa otp</string>
+    <string name="si_bvn_verification_enter_otp">ingiza otp iliyotumwa kwa %1$s</string>
+    <string name="si_bvn_verification_didnt_receive_otp">haujapokea otp?</string>
+    <string name="si_bvn_verification_different_contact_method">jaribu njia nyingine ya mawasiliano</string>
+    <string name="si_bvn_verification_invalid_otp">otp uliyoiingiza si sahihi</string>
+    <string name="si_bvn_verification_didnt_receive_otp_at">haujapokea otp kwa %1$s?</string>
+    <string name="si_bvn_verification_otp_acronym">otp</string>
+
+    <!--  enhanced docv screen  -->
+    <string name="si_enhanced_docv_product_name">uthibitisho wa hati ulio bora</string>
+
+    <!--  sdk errors  -->
+    <string name="si_processing_error_subtitle">hii inaweza kuwa kutokana na ubora wa picha au uunganisho wa intaneti</string>
+    <string name="si_no_internet">tafadhali angalia uunganisho wako wa intaneti</string>
+    <string name="si_error_message_2201"></string>
+    <string name="si_error_message_2301"></string>
+    <string name="si_error_message_2401"></string>
+    <string name="si_error_message_2203"></string>
+    <string name="si_error_message_2204"></string>
+    <string name="si_error_message_2205"></string>
+    <string name="si_error_message_2405"></string>
+    <string name="si_error_message_2207"></string>
+    <string name="si_error_message_2208"></string>
+    <string name="si_error_message_2209"></string>
+    <string name="si_error_message_2210"></string>
+    <string name="si_error_message_2211"></string>
+    <string name="si_error_message_2212"></string>
+    <string name="si_error_message_2213"></string>
+    <string name="si_error_message_2214"></string>
+    <string name="si_error_message_2215"></string>
+    <string name="si_error_message_2216"></string>
+    <string name="si_error_message_2220"></string>
+    <string name="si_error_message_2221"></string>
+    <string name="si_error_message_2314"></string>
+    <string name="si_error_message_2413"></string>
+    <string name="si_error_message_2414"></string>
+
+    <!--  offline mode  -->
+    <string name="si_offline_message">hakuna uunganisho wa intaneti. uthibitishaji wako utakamilika unapokuwa mtandaoni tena</string>
+</resources>
