@@ -3,11 +3,15 @@ package com.smileidentity.kmp.config
 /**
  * Configuration settings for Smile Identity SDK.
  *
- * @property apiKey The API key for authentication.
+ * @property authToken The API key for authentication.
  * @property environment The operating environment (PRODUCTION or SANDBOX).
  */
 data class SmileIdentityConfig(
-    val apiKey: String, val environment: Environment
+    val authToken: String,
+    val environment: Environment,
+    val productionLambdaUrl: String,
+    val testLambdaUrl: String,
+    val partnerId: String
 )
 
 

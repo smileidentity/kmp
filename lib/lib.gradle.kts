@@ -1,10 +1,8 @@
 import com.codingfeline.buildkonfig.compiler.FieldSpec
 import com.vanniktech.maven.publish.SonatypeHost
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import java.io.FileInputStream
 import java.util.Properties
-
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -22,11 +20,12 @@ project.version =
     findProperty("VERSION_NAME") as? String ?: file("VERSION").readText().trim().toString()
 
 kotlin {
+    jvmToolchain(17)
     jvm()
 
     androidTarget {
         publishLibraryVariants("release")
-        @OptIn(ExperimentalKotlinGradlePluginApi::class) compilerOptions {
+        compilerOptions {
             jvmTarget.set(JvmTarget.JVM_17)
         }
     }
@@ -54,7 +53,9 @@ kotlin {
                 implementation(compose.components.uiToolingPreview)
 
                 implementation(libs.lifecycle.viewmodel.compose)
-                implementation(libs.kotlinx.serialization.json)
+
+                //kotlinx
+                implementation(libs.bundles.kotlinx.common)
             }
         }
         val commonTest by getting {
@@ -169,5 +170,31 @@ buildkonfig {
             value = localProperties.getProperty("SMILE_ID_SMILE_LINK")
                 ?: System.getenv("SMILE_ID_SMILE_LINK")
         )
+
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_AUTH_TOKEN",
+            value = localProperties.getProperty("SMILE_ID_AUTH_TOKEN")
+                ?: System.getenv("SMILE_ID_AUTH_TOKEN")
+        )
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_PROD_LAMBDA_URL",
+            value = localProperties.getProperty("SMILE_ID_PROD_LAMBDA_URL")
+                ?: System.getenv("SMILE_ID_PROD_LAMBDA_URL")
+        )
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_TEST_LAMBDA_URL",
+            value = localProperties.getProperty("SMILE_ID_TEST_LAMBDA_URL")
+                ?: System.getenv("SMILE_ID_TEST_LAMBDA_URL")
+        )
+        buildConfigField(
+            type = FieldSpec.Type.STRING,
+            name = "SMILE_ID_PARTNER_ID",
+            value = localProperties.getProperty("SMILE_ID_PARTNER_ID")
+                ?: System.getenv("SMILE_ID_PARTNER_ID")
+        )
+
     }
 }

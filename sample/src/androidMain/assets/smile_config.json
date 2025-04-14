@@ -1,9 +1,0 @@
-{
-  "auth_token": "",
-  "partner_id": "",
-  "prod_lambda_url": "https://api.smileidentity.com/v1/",
-  "prod_url": "",
-  "test_lambda_url": "https://testapi.smileidentity.com/v1/",
-  "test_url": "",
-  "version": "1.0.0"
-}

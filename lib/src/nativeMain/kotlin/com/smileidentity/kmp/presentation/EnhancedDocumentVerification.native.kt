@@ -10,7 +10,6 @@ import com.smileidentity.kmp.presentation.enhanced_document_verification.KmpFile
 import com.smileidentity.kmp.presentation.enhanced_document_verification.SmileIDResult
 import kotlinx.collections.immutable.ImmutableMap
 
-
 @Composable
 actual fun ComposeEnhancedDocumentVerification(
     countryCode: String,
@@ -33,5 +32,7 @@ actual fun ComposeEnhancedDocumentVerification(
     typography: Typography,
     onResult: (SmileIDResult<EnhancedDocumentVerificationResult>) -> Unit
 ) {
-    TODO("Not yet implemented")
+
 }
+
+

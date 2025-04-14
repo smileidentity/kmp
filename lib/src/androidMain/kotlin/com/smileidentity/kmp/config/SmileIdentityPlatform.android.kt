@@ -2,6 +2,7 @@ package com.smileidentity.kmp.config
 
 import android.content.Context
 import com.smileidentity.SmileID
+import com.smileidentity.models.Config
 
 
 /**
@@ -27,7 +28,15 @@ actual object SmileIdentityPlatform {
         if (!isInitialized) {
             val context = appContext
                 ?: throw IllegalStateException("Application context not set. Make sure SmileIdentityInitProvider is registered.")
-            SmileID.initialize(context)
+
+            SmileID.initialize(
+                context = context, config = Config(
+                    partnerId = config.partnerId,
+                    authToken = config.authToken,
+                    prodLambdaUrl = config.productionLambdaUrl,
+                    testLambdaUrl = config.testLambdaUrl
+                )
+            )
             isInitialized = true
         }
     }

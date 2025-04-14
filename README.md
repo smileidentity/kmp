@@ -1,7 +1,7 @@
 # 🛡️ SMILE ID KMP
 
-A **Kotlin Multiplatform** library for performing SMILE ID's Identity Verification securely across *
-*Android** , **iOS** and **Desktop** platforms.
+A **Kotlin Multiplatform** library for performing SMILE ID's Identity Verification securely across
+**Android** , **iOS** and **Desktop** platforms.
 
 ---
 
