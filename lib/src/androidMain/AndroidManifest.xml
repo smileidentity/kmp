@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Initialize SmileID automatically -->
+        <provider
+            android:name="com.smileidentity.kmp.config.SmileIdentityInitProvider"
+            android:authorities="${applicationId}.smileidinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+    </application>
+
+</manifest>
