@@ -3,9 +3,14 @@ package com.smileidentity.kmp.presentation
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.Typography
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.smileidentity.kmp.config.SmileIdentity
+import com.smileidentity.kmp.enhanced_document_verification.presentation.IDAvailabilitySelectionScreen
 import com.smileidentity.kmp.presentation.enhanced_document_verification.ComposeConsentContent
 import com.smileidentity.kmp.presentation.enhanced_document_verification.EnhancedDocumentVerificationResult
 import com.smileidentity.kmp.presentation.enhanced_document_verification.KmpFile
@@ -21,7 +26,7 @@ import kotlinx.collections.immutable.persistentMapOf
 
 @Composable
 fun EnhancedDocumentVerification(
-    countryCode: String,
+    countryCode: String? = null,
     modifier: Modifier = Modifier,
     documentType: String? = null,
     captureBothSides: Boolean = true,
@@ -47,27 +52,41 @@ fun EnhancedDocumentVerification(
     onResult: (SmileIDResult<EnhancedDocumentVerificationResult>) -> Unit = {}
 ) {
     SmileIdentity.getInstance()
-    ComposeEnhancedDocumentVerification(
-        countryCode = countryCode,
-        modifier = modifier,
-        documentType = documentType,
-        captureBothSides = captureBothSides,
-        idAspectRatio = idAspectRatio,
-        bypassSelfieCaptureWithFile = bypassSelfieCaptureWithFile,
-        userId = userId,
-        jobId = jobId,
-        allowNewEnroll = allowNewEnroll,
-        showAttribution = showAttribution,
-        allowAgentMode = allowAgentMode,
-        allowGalleryUpload = allowGalleryUpload,
-        showInstructions = showInstructions,
-        useStrictMode = useStrictMode,
-        extraPartnerParams = extraPartnerParams,
-        consentInformation = consentInformation,
-        colorScheme = colorScheme,
-        typography = typography,
-        onResult = onResult
-    )
+
+    SmileIDTheme {
+
+        var selectedCountry by remember { mutableStateOf<String?>(null) }
+        var selectedIdType by remember { mutableStateOf<String?>(null) }
+
+        if (selectedCountry == null || selectedIdType == null) {
+            IDAvailabilitySelectionScreen { country, idType ->
+                selectedCountry = country
+                selectedIdType = idType
+            }
+        } else {
+            ComposeEnhancedDocumentVerification(
+                countryCode = selectedCountry!!,
+                documentType = selectedIdType,
+                modifier = modifier,
+                captureBothSides = captureBothSides,
+                idAspectRatio = idAspectRatio,
+                bypassSelfieCaptureWithFile = bypassSelfieCaptureWithFile,
+                allowNewEnroll = allowNewEnroll,
+                showAttribution = showAttribution,
+                allowAgentMode = allowAgentMode,
+                allowGalleryUpload = allowGalleryUpload,
+                showInstructions = showInstructions,
+                useStrictMode = useStrictMode,
+                extraPartnerParams = extraPartnerParams,
+                consentInformation = consentInformation,
+                colorScheme = colorScheme,
+                typography = typography,
+                onResult = onResult
+            )
+        }
+    }
+
+
 }
 
 @Composable

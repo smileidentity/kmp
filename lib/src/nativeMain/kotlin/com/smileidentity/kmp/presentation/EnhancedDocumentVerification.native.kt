@@ -12,27 +12,23 @@ import kotlinx.collections.immutable.ImmutableMap
 
 @Composable
 actual fun ComposeEnhancedDocumentVerification(
-    countryCode: String,
-    modifier: Modifier,
-    documentType: String?,
-    captureBothSides: Boolean,
-    idAspectRatio: Float?,
-    bypassSelfieCaptureWithFile: KmpFile?,
-    userId: String,
-    jobId: String,
-    allowNewEnroll: Boolean,
-    showAttribution: Boolean,
-    allowAgentMode: Boolean,
-    allowGalleryUpload: Boolean,
-    showInstructions: Boolean,
-    useStrictMode: Boolean,
-    extraPartnerParams: ImmutableMap<String, String>,
-    consentInformation: ComposeConsentContent,
-    colorScheme: ColorScheme,
-    typography: Typography,
-    onResult: (SmileIDResult<EnhancedDocumentVerificationResult>) -> Unit
-) {
-
-}
-
-
+  countryCode: String,
+  modifier: Modifier,
+  documentType: String?,
+  captureBothSides: Boolean,
+  idAspectRatio: Float?,
+  bypassSelfieCaptureWithFile: KmpFile?,
+  userId: String,
+  jobId: String,
+  allowNewEnroll: Boolean,
+  showAttribution: Boolean,
+  allowAgentMode: Boolean,
+  allowGalleryUpload: Boolean,
+  showInstructions: Boolean,
+  useStrictMode: Boolean,
+  extraPartnerParams: ImmutableMap<String, String>,
+  consentInformation: ComposeConsentContent,
+  colorScheme: ColorScheme,
+  typography: Typography,
+  onResult: (SmileIDResult<EnhancedDocumentVerificationResult>) -> Unit,
+) {}

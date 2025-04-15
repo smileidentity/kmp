@@ -10,7 +10,6 @@ actual class KmpFile(val file: File)
 
 @Composable
 actual fun getSmileIDColorScheme(): ColorScheme {
-
     return TODO("Provide the return value")
 }
 

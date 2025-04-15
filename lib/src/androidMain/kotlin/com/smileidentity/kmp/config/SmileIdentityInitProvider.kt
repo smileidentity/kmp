@@ -5,34 +5,32 @@ import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
 
-
-/**
- * Android Content Provider to automatically initialize Smile Identity SDK.
- */
+/** Android Content Provider to automatically initialize Smile Identity SDK. */
 class SmileIdentityInitProvider : ContentProvider() {
-    override fun onCreate(): Boolean {
-        val context = context ?: return false
-        SmileIdentityPlatform.setApplicationContext(context.applicationContext)
-        return true
-    }
+  override fun onCreate(): Boolean {
+    val context = context ?: return false
+    SmileIdentityPlatform.setApplicationContext(context.applicationContext)
+    return true
+  }
 
-    override fun query(
-        uri: Uri,
-        projection: Array<String>?,
-        selection: String?,
-        selectionArgs: Array<String>?,
-        sortOrder: String?
-    ): Cursor? = null
+  override fun query(
+    uri: Uri,
+    projection: Array<String>?,
+    selection: String?,
+    selectionArgs: Array<String>?,
+    sortOrder: String?,
+  ): Cursor? = null
 
-    override fun getType(uri: Uri): String? = null
-    override fun insert(uri: Uri, values: ContentValues?): Uri? = null
-    override fun delete(uri: Uri, selection: String?, selectionArgs: Array<String>?): Int = 0
-    override fun update(
-        uri: Uri,
-        values: ContentValues?,
-        selection: String?,
-        selectionArgs: Array<String>?
-    ): Int = 0
+  override fun getType(uri: Uri): String? = null
+
+  override fun insert(uri: Uri, values: ContentValues?): Uri? = null
+
+  override fun delete(uri: Uri, selection: String?, selectionArgs: Array<String>?): Int = 0
+
+  override fun update(
+    uri: Uri,
+    values: ContentValues?,
+    selection: String?,
+    selectionArgs: Array<String>?,
+  ): Int = 0
 }
-
-

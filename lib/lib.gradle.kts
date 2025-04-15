@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.buildkonfig)
+    alias(libs.plugins.kotlinSerialization)
 
 }
 
@@ -39,6 +40,7 @@ kotlin {
             dependencies {
                 implementation(libs.smile.id.android)
                 implementation(libs.androidx.activity.compose)
+                implementation(libs.ktor.client.okhttp)
             }
         }
 
@@ -56,7 +58,17 @@ kotlin {
 
                 //kotlinx
                 implementation(libs.bundles.kotlinx.common)
+
+                //Networking
+                implementation(libs.bundles.ktor.common)
+                implementation(libs.arrow.core)
+                implementation(libs.arrow.fx.coroutines)
+
+                //Logging
+                implementation(libs.napier)
             }
+
+
         }
         val commonTest by getting {
             dependencies {

@@ -203,4 +203,16 @@
 
     <!--  Offline Mode  -->
     <string name="si_offline_message">No internet connection. Your verification will be completed once you are back online</string>
+
+    <!-- Country Details Selection -->
+    <string name="si_country_sel_title">Enhanced Document Verification</string>
+    <string name="si_country_sel_back_title">A powerful add-on that authenticates identity documents and instantly verifies their details against government records for enhanced security.</string>
+    <string name="si_select_country">Select Country</string>
+    <string name="si_select_document">Select Document</string>
+    <string name="si_no_documents_available">No document is available for selected Country</string>
+    <string name="si_status_unknown">Status unknown</string>
+    <string name="si_proceed">Proceed to Verification</string>
+    <string name="si_country_sel_bottom_sheet_title">Please Select Your Country</string>
+
+
 </resources>

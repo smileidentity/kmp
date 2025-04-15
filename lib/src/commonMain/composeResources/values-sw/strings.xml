@@ -203,4 +203,15 @@
 
     <!--  offline mode  -->
     <string name="si_offline_message">hakuna uunganisho wa intaneti. uthibitishaji wako utakamilika unapokuwa mtandaoni tena</string>
+
+    <!-- Country Details Selection -->
+    <string name="si_country_sel_title">Uthibitishaji wa Hati Ulioimarishwa</string>
+    <string name="si_country_sel_back_title">Kiongezi chenye nguvu kinachothibitisha hati za utambulisho na kuthibitisha mara moja maelezo dhidi ya rekodi za serikali kwa usalama ulioimarishwa.</string>
+    <string name="si_select_country">Chagua Nchi</string>
+    <string name="si_select_document">Chagua Hati</string>
+    <string name="si_no_documents_available">Hakuna hati inayopatikana kwa Nchi Uliyochagua</string>
+    <string name="si_status_unknown">Hali haijulikani</string>
+    <string name="si_proceed">Endelea na Uthibitishaji</string>
+    <string name="si_country_sel_bottom_sheet_title">Tafadhali Chagua Nchi Yako</string>
+
 </resources>

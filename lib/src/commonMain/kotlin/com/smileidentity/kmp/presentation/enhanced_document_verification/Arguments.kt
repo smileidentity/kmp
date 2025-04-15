@@ -7,6 +7,7 @@ import com.smileidentity.kmp.utils.getCurrentIsoTimestamp
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+
 expect class KmpFile
 
 
@@ -27,13 +28,13 @@ data class ComposeConsentContent(
     }
 }
 
-@Serializable
+
 data class EnhancedDocumentVerificationResult(
-    @SerialName("selfie_file") val selfieFile: KmpFile,
-    @SerialName("document_front_file") val documentFrontFile: KmpFile,
-    @SerialName("liveness_files") val livenessFiles: List<KmpFile>? = null,
-    @SerialName("document_back_file") val documentBackFile: KmpFile? = null,
-    @SerialName("did_submit_enhanced_doc_v_job") val didSubmitEnhancedDocVJob: Boolean,
+    val selfieFile: KmpFile,
+    val documentFrontFile: KmpFile,
+    val livenessFiles: List<KmpFile>? = null,
+    val documentBackFile: KmpFile? = null,
+    val didSubmitEnhancedDocVJob: Boolean,
 )
 
 @Composable

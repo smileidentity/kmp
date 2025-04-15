@@ -10,14 +10,12 @@ import java.io.File
 
 actual class KmpFile(val file: File)
 
-
 @Composable
 actual fun getSmileIDColorScheme(): ColorScheme {
-    return SmileID.colorScheme
+  return SmileID.colorScheme
 }
 
 @Composable
 actual fun getSmileIDTypography(): Typography {
-    return SmileID.typography
+  return SmileID.typography
 }
-
