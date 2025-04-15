@@ -1,9 +1,9 @@
 package com.smileidentity.kmp.utils
 
 import com.smileidentity.kmp.config.BuildKonfig
+import kotlinx.datetime.Clock
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
-import kotlin.time.Clock.System
 import kotlin.time.ExperimentalTime
 
 expect fun hmacSha256(key: ByteArray, data: ByteArray): ByteArray
@@ -13,7 +13,7 @@ fun generateSignature(): Pair<String, String> {
 
   try {
     // Generate Timestamp
-    val timestamp: String = System.now().toString()
+    val timestamp: String = Clock.System.now().toString()
 
     // Generate HMAC-SHA256 Signature
     val message = "$timestamp${BuildKonfig.SMILE_ID_PARTNER_ID}" + "sid_request"

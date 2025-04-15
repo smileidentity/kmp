@@ -5,6 +5,7 @@ import androidx.compose.runtime.Composable
 import com.smileidentity.kmp.presentation.enhanced_document_verification.getSmileIDColorScheme
 import com.smileidentity.kmp.presentation.enhanced_document_verification.getSmileIDTypography
 
+/** @TODO - to implement this */
 @Composable
 actual fun SmileIDTheme(content: @Composable () -> Unit) {
   MaterialTheme(

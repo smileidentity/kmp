@@ -38,7 +38,7 @@ actual fun ComposeEnhancedDocumentVerification(
 ) {
   SmileID.EnhancedDocumentVerificationScreen(
     countryCode = countryCode,
-    captureBothSides = false,
+    captureBothSides = captureBothSides,
     documentType = documentType,
     bypassSelfieCaptureWithFile = bypassSelfieCaptureWithFile as File?,
     jobId = jobId,

@@ -1,5 +1,6 @@
 package com.smileidentity.kmp.utils
 
+/** @TODO - to implement this */
 actual fun hmacSha256(key: ByteArray, data: ByteArray): ByteArray {
-  TODO("Not yet implemented")
+  return ByteArray(32)
 }

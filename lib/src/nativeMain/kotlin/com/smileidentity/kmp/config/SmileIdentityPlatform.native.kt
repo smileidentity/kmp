@@ -1,9 +1,6 @@
 package com.smileidentity.kmp.config
 
-/** iOS-specific implementation for initializing the Smile Identity SDK. */
+/** @TODO - to implement this */
 actual object SmileIdentityPlatform {
-  /** Initializes the SDK for iOS. */
-  actual fun initPlatform(config: SmileIdentityConfig) {
-    TODO("Not yet implemented")
-  }
+  actual fun initPlatform(config: SmileIdentityConfig) {}
 }
