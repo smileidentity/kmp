@@ -22,44 +22,41 @@ import kotlinx.serialization.json.Json
  */
 class SmileIDClient {
 
-  private val apiHost: String = "prod.smileidentity.com/api/v2/partner"
+    val apiClient = HttpClient {
+        defaultRequest {
+            url {
+                protocol = URLProtocol.HTTPS
+                host = "prod.smileidentity.com"
+            }
 
-  val apiClient = HttpClient {
-    defaultRequest {
-      url {
-        protocol = URLProtocol.HTTPS
-        host = apiHost
-      }
-
-      headers.appendIfNameAndValueAbsent(
-        "Authorization",
-        "Bearer ${BuildKonfig.SMILE_ID_AUTH_TOKEN}",
-      )
-    }
-    install(ContentNegotiation) {
-      json(
-        Json {
-          prettyPrint = true
-          ignoreUnknownKeys = true
+            headers.appendIfNameAndValueAbsent(
+                "Authorization",
+                "Bearer ${BuildKonfig.SMILE_ID_AUTH_TOKEN}",
+            )
         }
-      )
+        install(ContentNegotiation) {
+            json(
+                Json {
+                    prettyPrint = true
+                    ignoreUnknownKeys = true
+                })
+        }
     }
-  }
 
-  /** API call that handles both success and error responses */
-  suspend inline fun <reified T> makeApiCall(
-    apiCall: HttpClient.() -> HttpResponse
-  ): Either<Throwable, T> {
-    return try {
-      val response = apiCall.invoke(apiClient)
-      if (response.status.value in 200..299) {
-        response.body<T>().right()
-      } else {
-        val errorMessage = response.body<String>()
-        Throwable("Error: $errorMessage, Status Code: ${response.status.value}").left()
-      }
-    } catch (e: Throwable) {
-      e.left()
+    /** API call that handles both success and error responses */
+    suspend inline fun <reified T> makeApiCall(
+        apiCall: HttpClient.() -> HttpResponse
+    ): Either<Throwable, T> {
+        return try {
+            val response = apiCall.invoke(apiClient)
+            if (response.status.value in 200..299) {
+                response.body<T>().right()
+            } else {
+                val errorMessage = response.body<String>()
+                Throwable("Error: $errorMessage, Status Code: ${response.status.value}").left()
+            }
+        } catch (e: Throwable) {
+            e.left()
+        }
     }
-  }
 }
