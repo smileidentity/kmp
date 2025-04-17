@@ -4,9 +4,6 @@
 <a href="https://apps.apple.com/us/app/smile-id/id6448359701?itscg=30200&amp;itsct=apps_box_appicon" style="width: 170px; height: 170px; border-radius: 22%; overflow: hidden; display: inline-block; vertical-align: middle;"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/30/4a/94/304a94c9-239c-e460-c7e0-702cc8945827/AppIcon-1x_U007emarketing-0-10-0-85-220-0.png/540x540bb.jpg" alt="Smile ID" style="width: 170px; height: 170px; border-radius: 22%; overflow: hidden; display: inline-block; vertical-align: middle;"></a>
 </p>
 
-[![pub package](https://img.shields.io/pub/v/smile_id.svg)](https://pub.dev/packages/smile_id)
-[![Build](https://github.com/smileidentity/kmp/actions/workflows/build.yaml/badge.svg)](https://github.com/smileidentity/kmp/actions/workflows/build.yaml)
-
 Smile ID provides the best solutions for Real Time Digital KYC, Identity Verification, User
 Onboarding, and User Authentication across Africa.
 
