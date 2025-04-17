@@ -9,12 +9,11 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.smileidentity.kmp.sample"
+        applicationId = "com.smileidentity.kmp.sample.android"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
