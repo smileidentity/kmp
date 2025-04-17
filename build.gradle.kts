@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.kotlin.multiplatform) apply false
     alias(libs.plugins.kotlin.cocoapods) apply false
+    alias(libs.plugins.kotlin.android) apply false
 }
 
 tasks.create("clean", Delete::class.java) {
