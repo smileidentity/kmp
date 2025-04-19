@@ -50,7 +50,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.smileidentity.kmp.sample.cmp"
+    namespace = "com.smileidentity.kmp.sample"
     compileSdk = libs.versions.sdk.android.compile.get().toInt()
 
     defaultConfig {
