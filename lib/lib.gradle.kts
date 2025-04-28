@@ -3,9 +3,10 @@ import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.mavenPublish)
+    alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.kotlin.cocoapods)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.maven.publish)
 }
 
 val groupId = "com.smileidentity"
@@ -27,15 +28,14 @@ kotlin {
     linuxX64()
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                //put your multiplatform dependencies here
-            }
+        commonMain.dependencies {
+            //put your multiplatform dependencies here
         }
-        val commonTest by getting {
-            dependencies {
-                implementation(libs.kotlin.test)
-            }
+        commonTest.dependencies {
+            implementation(libs.kotlin.test)
+        }
+        androidMain.dependencies {
+            implementation(libs.smile.android)
         }
     }
 }
@@ -99,6 +99,14 @@ mavenPublishing {
                 url = "https://github.com/lazarusmugo"
                 organization = "Tajji Ltd"
                 organizationUrl = "https://tajji.io"
+            }
+            developer {
+                id = "mambobryan"
+                name = "Brian Odhiambo"
+                email = "mambobryan@gmail.com"
+                url = "https://github.com/MamboBryan"
+                organization = "Bizilabs"
+                organizationUrl = "https://bizilabs.org"
             }
         }
     }

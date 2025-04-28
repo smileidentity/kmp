@@ -1,18 +1,37 @@
-*.iml
-.kotlin
+# Gradle
 .gradle
-**/build/
-xcuserdata
-!src/**/build/
-local.properties
+/conventions/.gradle
+
+# Intellij & AndroidStudio files
+.fleet
+.kotlin
 .idea
+
+# Build
+**/build/**
+
+# Properties
+local.properties
+/local.properties
+
+# Configs
+**/smile_config.json
+
+# Mac Specific Files
 .DS_Store
-captures
+
+# Apk
+*.apk
+
+# App Bundle
+*.aab
+
+# Other Folders
+/captures
+*.xcodeproj/*
+xcuserdata
+
+# Other Files
+*.iml
 .externalNativeBuild
 .cxx
-*.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcodeproj/project.xcworkspace/
-!*.xcworkspace/contents.xcworkspacedata
-**/xcshareddata/WorkspaceSettings.xcsettings
