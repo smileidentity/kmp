@@ -6,7 +6,7 @@ import com.smileidentity.kmp.models.KmpConfig
 import com.smileidentity.kmp.models.KmpEnhancedKycAsyncResponse
 import com.smileidentity.kmp.models.KmpEnhancedKycRequest
 
-expect class SmileID {
+expect object SmileID {
 
     fun initialize(
         context: PlatformDependency,
