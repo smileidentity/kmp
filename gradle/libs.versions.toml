@@ -2,7 +2,7 @@
 agp = "8.9.1"
 # sdk
 sdk-android-compile = "35"
-sdk-android-min = "28"
+sdk-android-min = "21"
 sdk-android-target = "35"
 # androidx
 androidx-core-ktx = "1.16.0"

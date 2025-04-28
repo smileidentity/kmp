@@ -100,6 +100,14 @@ mavenPublishing {
                 organization = "Tajji Ltd"
                 organizationUrl = "https://tajji.io"
             }
+            developer {
+                id = "mambobryan"
+                name = "Brian Odhiambo"
+                email = "mambobryan@gmail.com"
+                url = "https://github.com/MamboBryan"
+                organization = "Bizilabs"
+                organizationUrl = "https://bizilabs.org"
+            }
         }
     }
 }
