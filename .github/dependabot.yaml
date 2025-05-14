@@ -2,6 +2,8 @@
 version: 2
 updates:
   - package-ecosystem: "gradle"
+    assignees:
+      - jumaallan
     directory: "/"
     schedule:
       interval: "weekly"
