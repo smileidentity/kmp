@@ -19,7 +19,7 @@ kotlin = "2.1.21"
 kotlinx-coroutines = "1.10.2"
 maven-publish = "0.32.0"
 ktlint-plugin = "12.3.0"
-smile-android-sdk = "10.6.3"
+smile-android-sdk = "11.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
