@@ -17,9 +17,9 @@ compose-multiplatform = "1.8.2"
 junit = "4.13.2"
 kotlin = "2.2.0"
 kotlinx-coroutines = "1.10.2"
-maven-publish = "0.33.0"
+maven-publish = "0.34.0"
 ktlint-plugin = "12.3.0"
-smile-android-sdk = "11.0.4"
+smile-android-sdk = "11.0.5"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
