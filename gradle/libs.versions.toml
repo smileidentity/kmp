@@ -1,5 +1,5 @@
 [versions]
-agp = "8.11.0"
+agp = "8.11.1"
 # sdk
 sdk-android-compile = "35"
 sdk-android-min = "21"
@@ -17,9 +17,9 @@ compose-multiplatform = "1.8.2"
 junit = "4.13.2"
 kotlin = "2.2.0"
 kotlinx-coroutines = "1.10.2"
-maven-publish = "0.33.0"
+maven-publish = "0.34.0"
 ktlint-plugin = "13.0.0"
-smile-android-sdk = "11.0.4"
+smile-android-sdk = "11.0.5"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
