@@ -15,11 +15,11 @@ androidx-compose-bom = "2025.08.01"
 androidx-acitivty-compose = "1.10.1"
 compose-multiplatform = "1.8.2"
 junit = "4.13.2"
-kotlin = "2.2.10"
+kotlin = "2.2.20"
 kotlinx-coroutines = "1.10.2"
 maven-publish = "0.34.0"
 ktlint-plugin = "13.1.0"
-smile-android-sdk = "11.1.0"
+smile-android-sdk = "11.1.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
