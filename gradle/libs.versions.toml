@@ -18,7 +18,7 @@ junit = "4.13.2"
 kotlin = "2.2.21"
 kotlinx-coroutines = "1.10.2"
 maven-publish = "0.34.0"
-ktlint-plugin = "13.1.0"
+ktlint-plugin = "14.0.1"
 smile-android-sdk = "11.1.4"
 
 [libraries]
